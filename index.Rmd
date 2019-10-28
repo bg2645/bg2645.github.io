@@ -1,0 +1,13 @@
+---
+title: "Bing Bing Guo's Website (P8105)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Bing Bing Guo's Website
+
+
+You can find my resume [here] (about.html)
