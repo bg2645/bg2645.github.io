@@ -7,10 +7,10 @@ navbar:
       href: about.html
     - icon: fa-envelope fa-lg
       href: mailto:<bg2645@cumc.columbia.edu>
-    - icon: fa-linkedin
+    - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/bing-bing-guo-b3ab92b7/
     - icon: fa-github fa-lg
       href: http://github.com/bg2645/
 output:
   html_document:
-    theme: cerulean
+    theme: flatly
