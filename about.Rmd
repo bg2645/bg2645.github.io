@@ -4,7 +4,24 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# Bing Bing Guo's current updated resume 
+
+<ins>**EDUCATION**</ins>  
+
+*Columbia University, Mailman School of Public Health* <div style="text-align: right"> [September 2018 – Present] </div>
+     MPH in Epidemiology Candidate  
+     Certificate in Chronic Disease Epidemiology 
+
+
+<ins>**PROFESSIONAL ORGANIZATIONS**</ins>
+
+<ins>**WORK EXPERIENCE**</ins> 
+
+<ins>**RESEARCH EXPERIENCE**</ins>
+
+<ins>**CLINICAL EXPERIENCE**</ins>
+
+<ins>**PUBLICATION**</ins>
+
+<ins>**ADDITIONAL SKILLS**</ins>  
