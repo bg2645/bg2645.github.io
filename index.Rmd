@@ -13,12 +13,12 @@ output:
 
 <br/>
 
-#### My contact information, updated resume, linkedin, and github profile can be found in the navigation pane above. 
+#### My contact information, resume, linkedin, and github profile can be found in the navigation pane above. You can also find examples of my data science work under the Graphics tab. 
 
 <br/> 
 
 <img src="https://media.giphy.com/media/ohdY5OaQmUmVW/200w_d.gif" style="width:75%">
 
 
-#### Please do not hestitate to contact me with any professional inquiries. 
+#### Please do not hestitate to contact me with any professional inquiries! 
 
