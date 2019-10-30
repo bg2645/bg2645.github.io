@@ -8,3 +8,5 @@ output:
 
 #### Welcome to Bing Bing Guo's webpage 
 
+
+<img src="images/IMG_8560.jpg" style="width:75%">
