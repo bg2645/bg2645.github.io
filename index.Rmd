@@ -6,7 +6,15 @@ output:
     toc_float: true
 ---
 
-#### Welcome to Bing Bing Guo's webpage 
-
+This website showcases my professional and academic interests and accomplishments. 
 
 <img src="images/IMG_8560.jpg" style="width:75%">
+
+<br/>
+
+### Please refer to the navigation pane for contact information, resume, linkedin, and github information 
+
+<br/> 
+
+<img src="https://media.giphy.com/media/ohdY5OaQmUmVW/200w_d.gif" style="width:75%">
+
