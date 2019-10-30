@@ -6,6 +6,5 @@ output:
     toc_float: true
 ---
 
-# This is Bing Bing Guo's Website
-
+#### Welcome to Bing Bing Guo's webpage 
 

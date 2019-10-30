@@ -1,5 +1,5 @@
 ---
-title: "Bing Bing Guo's Academic and Professional Experience"
+title: "Academic and Professional Experience"
 output: 
   html_document:
     toc: true
@@ -7,21 +7,86 @@ output:
 ---
 
 
-<ins>**EDUCATION**</ins>  
+### <ins> **EDUCATION**</ins>  
+*Columbia University, Mailman School of Public Health*  [*September 2018 – Present*]{style="float:right"}  
+MPH in Epidemiology Candidate  
+Certificate in Chronic Disease Epidemiology 
 
-*Columbia University, Mailman School of Public Health* <div style="text-align: right"> [September 2018 – Present] </div>
-     MPH in Epidemiology Candidate  
-     Certificate in Chronic Disease Epidemiology 
+*Smith College, Northampton, MA*  [*September 2011 – May 2015*]{style="float:right"}  
+B.A in Biochemistry   
+Honors: Dean’s List 2012-2013, Dean’s List 2013-2014, Dean’s List 2014-2015, Liberal Arts Commendation 
+
+### <ins>**PROFESSIONAL ORGANIZATIONS**</ins>
+Member of Sigma Xi, The Scientific Research Honor Society – Smith College Chapter  [*April 2015 – Present*]{style="float:right"}  
+
+### <ins>**WORK EXPERIENCE**</ins> 
+**New York City Department of Health and Mental Hygiene**  [*June 2019 – Present*]{style="float:right"}
+
+Data Analyst Intern (*August 2019 – Present*)
+
+* Continuation of Summer 2019 Epi Scholar 
+
+Epi Scholar (*Summer 2019*)  
+
+* Epi Scholars Program in Health Disparities research project in the Division of Disease Control, Bureau of Tuberculosis Control: Epidemiology of tuberculosis among individuals born in the United States, 2009-2017
+
+* Co-formulated data analysis plan, including research question development, variable selection, and modeling methods 
+
+* Conducted data cleaning, data analysis and spatial analysis using SAS Enterprise Guide 7.1 and ARCMap 10.6.1
+
+* Presented project findings to NYC DOHMH and created an abstract and scientific poster for the Columbia University
+
+**Mabtech Holdings Ltd.** 		[*December 2016 – August 2018*]{style="float:right"}  
+Market Research Associate
+
+* Kept the leadership team abreast of global biosimilar industry trends through presentations and internal briefs
+*	Maintained and fostered close client relationships with pharmaceutical and biotechnology company contacts
+*	Managed communications between the internal operations team and research team
+
+**Impact Communication Partners, Medical Editorial Department**                  [*June 2015 – July 2016*]{style="float:right"}  
+Editorial Assistant 
+
+*	Developed and edited materials for programs, targeting audiences such as physicians, nurses, and patients 
+*	Oversaw editorial review such as fact checking, drafting copy, annotating, proofreading, incorporating client comments, accessing journal articles, conducting primary and secondary literary research, and submitting materials for regulatory review 
+*	Managed projects by developing timelines and tracking progress of teammates and freelancers 
 
 
-<ins>**PROFESSIONAL ORGANIZATIONS**</ins>
+### <ins>**RESEARCH EXPERIENCE**</ins>
+ <p> **Dr. Steven A. Williams Lab: Filarial Parasite Morphology (Smith College)**  [*May 2013 – May 2015*]{style="float:right"}  
+Researcher  
 
-<ins>**WORK EXPERIENCE**</ins> 
+*	Used Scanning Electron Microscope (SEM), FEI Quanta 450, to determine filarial parasite morphology  
+*	Critically analyzed SEM pictures to observe/discover trends in morphology – used images to create a database 
+*	Smith College Collaborations Poster Presenter – Filarial Parasite Morphology and Fixation Procedures for SEM
 
-<ins>**RESEARCH EXPERIENCE**</ins>
+**Dr. Qian Tao Lab: Cancer Epigenetics (Prince of Wales Hospital, Hong Kong)**     [*May – August 2014*]{style="float:right"}  
+Research Assistant  
 
-<ins>**CLINICAL EXPERIENCE**</ins>
+*	Conducted comprehensive research and analysis of scientific literature in regards to cancer epigenetics 
+*	Investigated the presence of HPV in nasopharyngeal carcinoma (NPC) – primer design, PCR, agarose gel electrophoresis, and gel imaging (Bio-Rad Universal Hood/Gel Doc XR Imaging System) 
 
-<ins>**PUBLICATION**</ins>
 
-<ins>**ADDITIONAL SKILLS**</ins>  
+### <ins>**CLINICAL EXPERIENCE**</ins>
+**Volunteer Staff – MJHS Hospice and Palliative Care (New York, NY)**     [*May 2017 – April 2018*]{style="float:right"}  
+
+* Volunteered weekly at The New Jewish Home and patient home visits as part of the MJHS Hospice team  
+*	Provided companionship and support to the patients and their families and assisted the nurses/onsite team
+
+**Shadowing – Lexington Neurology Associates (New York, NY) **  [*March – May 2017*]{style="float:right"}  
+
+*	Shadowed and assisted Dr. Dexter Sun, MD, PhD at the Lexington Neurology Associates office and New York-Presbyterian/Weill Cornell Medical Center 
+
+
+### <ins>**PUBLICATION**</ins>
+[Li, L., Zhang, Y., Guo, B., Chan, F. L., & Tao, Q. (2014). Oncogenic induction of cellular high CpG methylation by Epstein-Barr virus in malignant epithelial cells. Chinese Journal of Cancer, 33(12), 604-608. doi:10.5732/cjc.014.10191](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4308656/)
+
+
+### <ins>**ADDITIONAL SKILLS**</ins>  
+**Computer Skills:** MS Office, Adobe Photoshop, Adobe Illustrator, ChemDraw, Logger Pro, Protein Workshop, KaleidaGraph 
+
+**Programming Skills:** SAS, R, STATA, SQL, ArcGIS/ArcMap
+
+**Certifications:** CITI certification, HIPAA certification 
+
+**Languages:** Fluent in Mandarin Chinese, proficient in French [IB Standard Level-5, IGCSE-A]
+
