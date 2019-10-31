@@ -49,7 +49,7 @@ cheesepuff %>%
 top_ten =
   instacart %>% 
   count(aisle, sort = TRUE) %>% 
-  top_n(10) %>% 
+  top_n(8) %>% 
   select(aisle) 
 
 counts = instacart%>% 
@@ -58,7 +58,7 @@ group_by(aisle) %>%
 summarize(reordered = n())  
 ```
 
-The number of reordered products in the top 10 aisles in the snack department 
+The number of reordered products in the top 8 aisles in the snack department 
 
 ```{r}
 inner_join(counts, top_ten, by = "aisle")  %>% 
@@ -77,5 +77,6 @@ top_product =
 inner_join(instacart, top_product, by = "product_name") %>% 
   plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "Set2", alpha = 0.5) %>% 
 layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
-       yaxis = list(title = 'Order Hour of Day'))
+       yaxis = list(title = 'Order Hour of Day'),
+       showlegend = FALSE)
 ```

@@ -33,7 +33,7 @@ layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
 
 
 
-Column {data-width=400}
+Column {data-width=400, data-height=500}
 -----------------------------------------------------------------------
 
 ### Chart B
@@ -42,7 +42,7 @@ Column {data-width=400}
 top_ten =
   instacart %>% 
   count(aisle, sort = TRUE) %>% 
-  top_n(10) %>% 
+  top_n(8) %>% 
   select(aisle) 
 
 counts = instacart%>% 
@@ -53,8 +53,9 @@ summarize(reordered = n())
 inner_join(counts, top_ten, by = "aisle")  %>% 
   plot_ly(x = ~aisle, y = ~reordered, color = ~aisle, type = "bar", alpha = 0.5) %>% 
  layout(xaxis = list(title = 'Aisle'),
-         yaxis = list(title = 'Number of Reordered Products'))
+         yaxis = list(title = 'Products Reordered (n)'))
 ```
+
 
 ### Chart C
 
@@ -77,6 +78,6 @@ summarize(order_id = n())
 cheesepuff %>%
   plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
   layout(xaxis = list(title = 'Day of the Week'),
-         yaxis = list(title = 'Number of Orders'))
+         yaxis = list(title = 'Orders (n)'))
 ```
 
