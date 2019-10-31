@@ -2,6 +2,7 @@
 title: "Plotly Examples"
 output: 
   html_document:
+    code_folding: hide
     toc: true
     toc_float: true
 ---
@@ -16,46 +17,63 @@ library(plotly)
 ```{r}
 data("instacart")
 instacart = instacart %>%
-filter(department == "snacks", reordered == 1) %>%
+filter(department == "snacks") %>%
 mutate(reordered = recode(reordered, "1" = "Yes", "0" = "No"), 
        order_dow = recode(order_dow, "0" = "Sunday", "1" = "Monday", 
                           "2" = "Tuesday", "3" = "Wednesday", "4" = "Thursday", 
-                          "5" = "Friday", "6" = "Saturday")) %>%
-select(aisle, product_name, order_hour_of_day, order_dow, reordered, product_id)
-instacart
+                          "5" = "Friday", "6" = "Saturday"),
+       order_dow= factor(order_dow, levels = c("Sunday", "Monday", "Tuesday", "Wednesday", 
+                                               "Thursday", "Friday", "Saturday"))) 
+```
 
+```{r}
+cheesepuff = instacart %>%
+filter(product_name %in% c("Cheese Puffs Original", "Cheese Puffs", "Original Baked Cheese Puffs")) %>% 
+group_by(product_name, order_dow) %>% 
+summarize(order_id = n())
+```
+
+The number of Cheese puffs, cheese puffs originals, original baksed cheese puffs, ordered according to the day of the week on which the order was placed
+```{r}
+cheesepuff %>%
+  plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
+  layout(xaxis = list(title = 'Day of the Week'),
+         yaxis = list(title = 'Number of Orders'))
+```
+
+
+```{r} 
 top_ten =
   instacart %>% 
   count(aisle, sort = TRUE) %>% 
   top_n(10) %>% 
   select(aisle) 
-top_ten
 
- 
 counts = instacart%>% 
-  group_by(aisle)%>% 
-summarize(reordered = n()) 
-counts
+filter(reordered == "Yes") %>% 
+group_by(aisle) %>% 
+summarize(reordered = n())  
 ```
 
 The number of reordered products in the top 10 aisles in the snack department 
 
 ```{r}
 inner_join(counts, top_ten, by = "aisle")  %>% 
-  plot_ly(x = ~aisle, y = ~reordered, color = ~aisle, type = "bar")
+  plot_ly(x = ~aisle, y = ~reordered, color = ~aisle, type = "bar", alpha = 0.5) %>% 
+ layout(xaxis = list(title = 'Aisle'),
+         yaxis = list(title = 'Number of Reordered Products'))
 ```
-
+The distribution of the hour of the day on which the order was placed for the top 10 products in the snacks department. 
 ```{r}
-
 top_product =
   instacart %>% 
   count(product_name, sort = TRUE) %>% 
   top_n(10) %>% 
   select(product_name) 
-top_product
 
 inner_join(instacart, top_product, by = "product_name") %>% 
-  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box",
-          colors = "Set2")
-
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", alpha = 0.5,
+          colors = "Set2") %>% 
+layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
+         yaxis = list(title = 'Order Hour of Day'))
 ```
