@@ -15,7 +15,7 @@ library(plotly)
 ```
 
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 ### Chart A
 
@@ -42,7 +42,7 @@ cheesepuff %>%
 ```
 
 
-Column {data-width=350}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Chart B
