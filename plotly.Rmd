@@ -7,7 +7,7 @@ output:
     toc_float: true
 ---
 
-```{r}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
@@ -72,8 +72,7 @@ top_product =
   select(product_name) 
 
 inner_join(instacart, top_product, by = "product_name") %>% 
-  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", alpha = 0.5,
-          colors = "Set2") %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", alpha = 0.5) %>% 
 layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
          yaxis = list(title = 'Order Hour of Day'))
 ```

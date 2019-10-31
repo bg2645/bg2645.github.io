@@ -13,33 +13,67 @@ library(viridis)
 library(p8105.datasets)
 library(plotly)
 ```
----
 
-```{r setup, include=FALSE}
-library(flexdashboard)
-```
 
-Column {data-width=650}
------------------------------------------------------------------------
 
 ### Chart A
 
 ```{r}
+data("instacart")
+instacart = instacart %>%
+filter(department == "snacks") %>%
+mutate(reordered = recode(reordered, "1" = "Yes", "0" = "No"), 
+       order_dow = recode(order_dow, "0" = "Sunday", "1" = "Monday", 
+                          "2" = "Tuesday", "3" = "Wednesday", "4" = "Thursday", 
+                          "5" = "Friday", "6" = "Saturday"),
+       order_dow= factor(order_dow, levels = c("Sunday", "Monday", "Tuesday", "Wednesday", 
+                                               "Thursday", "Friday", "Saturday"))) 
 
+cheesepuff = instacart %>%
+filter(product_name %in% c("Cheese Puffs Original", "Cheese Puffs", "Original Baked Cheese Puffs")) %>% 
+group_by(product_name, order_dow) %>% 
+summarize(order_id = n())
+
+cheesepuff %>%
+  plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
+  layout(xaxis = list(title = 'Day of the Week'),
+         yaxis = list(title = 'Number of Orders'))
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
+
 
 ### Chart B
 
 ```{r}
+top_ten =
+  instacart %>% 
+  count(aisle, sort = TRUE) %>% 
+  top_n(10) %>% 
+  select(aisle) 
 
+counts = instacart%>% 
+filter(reordered == "Yes") %>% 
+group_by(aisle) %>% 
+summarize(reordered = n())  
+
+inner_join(counts, top_ten, by = "aisle")  %>% 
+  plot_ly(x = ~aisle, y = ~reordered, color = ~aisle, type = "bar", alpha = 0.5) %>% 
+ layout(xaxis = list(title = 'Aisle'),
+         yaxis = list(title = 'Number of Reordered Products'))
 ```
 
 ### Chart C
 
 ```{r}
+top_product =
+  instacart %>% 
+  count(product_name, sort = TRUE) %>% 
+  top_n(10) %>% 
+  select(product_name) 
 
+inner_join(instacart, top_product, by = "product_name") %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", alpha = 0.5) %>% 
+layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
+         yaxis = list(title = 'Order Hour of Day'))
 ```
 
