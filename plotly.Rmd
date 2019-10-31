@@ -40,7 +40,8 @@ The number of Cheese puffs, cheese puffs originals, original baksed cheese puffs
 cheesepuff %>%
   plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
   layout(xaxis = list(title = 'Day of the Week'),
-         yaxis = list(title = 'Number of Orders'))
+         yaxis = list(title = 'Number of Orders'),
+         legend = list(x = 0.5, y = 0.95))
 ```
 
 
@@ -74,7 +75,7 @@ top_product =
   select(product_name) 
 
 inner_join(instacart, top_product, by = "product_name") %>% 
-  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", alpha = 0.5) %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "Set2", alpha = 0.5) %>% 
 layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
-         yaxis = list(title = 'Order Hour of Day'))
+       yaxis = list(title = 'Order Hour of Day')) 
 ```
