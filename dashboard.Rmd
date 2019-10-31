@@ -1,5 +1,5 @@
 ---
-title: "My first dashboard"
+title: "Dashboard Example"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -13,3 +13,4 @@ library(viridis)
 library(p8105.datasets)
 library(plotly)
 ```
+
