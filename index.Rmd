@@ -13,7 +13,7 @@ output:
 
 <br/>
 
-#### My contact information, resume, linkedin, and github profile can be found in the navigation pane above. You can also find examples of my data science work under the Graphics tab. 
+#### My contact information, resume, linkedin, and github profile can be found in the navigation pane above. You can also find examples of my data science work (eg plotly and dashboard) under the Graphics tab. 
 
 <br/> 
 

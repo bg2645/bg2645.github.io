@@ -14,4 +14,48 @@ library(plotly)
 ```
 
 ```{r}
-set.seed(1)
+data("instacart")
+instacart = instacart %>%
+filter(department == "snacks", reordered == 1) %>%
+mutate(reordered = recode(reordered, "1" = "Yes", "0" = "No"), 
+       order_dow = recode(order_dow, "0" = "Sunday", "1" = "Monday", 
+                          "2" = "Tuesday", "3" = "Wednesday", "4" = "Thursday", 
+                          "5" = "Friday", "6" = "Saturday")) %>%
+select(aisle, product_name, order_hour_of_day, order_dow, reordered, product_id)
+instacart
+
+top_ten =
+  instacart %>% 
+  count(aisle, sort = TRUE) %>% 
+  top_n(10) %>% 
+  select(aisle) 
+top_ten
+
+ 
+counts = instacart%>% 
+  group_by(aisle)%>% 
+summarize(reordered = n()) 
+counts
+```
+
+The number of reordered products in the top 10 aisles in the snack department 
+
+```{r}
+inner_join(counts, top_ten, by = "aisle")  %>% 
+  plot_ly(x = ~aisle, y = ~reordered, color = ~aisle, type = "bar")
+```
+
+```{r}
+
+top_product =
+  instacart %>% 
+  count(product_name, sort = TRUE) %>% 
+  top_n(10) %>% 
+  select(product_name) 
+top_product
+
+inner_join(instacart, top_product, by = "product_name") %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box",
+          colors = "Set2")
+
+```
