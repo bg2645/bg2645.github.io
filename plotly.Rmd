@@ -12,6 +12,8 @@ library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
+
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 ```{r}

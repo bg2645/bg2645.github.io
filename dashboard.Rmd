@@ -12,6 +12,8 @@ library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
+
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 
@@ -79,4 +81,5 @@ inner_join(instacart, top_product, by = "product_name") %>%
 layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
          yaxis = list(title = 'Order Hour of Day'))
 ```
+
 
