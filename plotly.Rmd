@@ -35,7 +35,7 @@ group_by(product_name, order_dow) %>%
 summarize(order_id = n())
 ```
 
-The number of Cheese Puffs, Cheese Puffs Originals, Original Baked Cheese Puffs, ordered according to the day of the week on which the order was placed
+**Figure 1. The number of Cheese Puffs, Cheese Puffs Originals, Original Baked Cheese Puffs, ordered according to the day of the week on which the order was placed**
 ```{r}
 cheesepuff %>%
   plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
@@ -58,7 +58,7 @@ group_by(aisle) %>%
 summarize(reordered = n())  
 ```
 
-The number of reordered products in the top 8 aisles in the snack department 
+**Figure 2. The number of reordered products in the top 8 aisles in the snack department** 
 
 ```{r}
 inner_join(counts, top_ten, by = "aisle")  %>% 
@@ -66,7 +66,8 @@ inner_join(counts, top_ten, by = "aisle")  %>%
  layout(xaxis = list(title = 'Aisle'),
          yaxis = list(title = 'Number of Reordered Products'))
 ```
-The distribution of the hour of the day on which the order was placed for the top 10 products in the snacks department. 
+
+**Figure 3. The distribution of the hour of the day on which the order was placed for the top 10 products in the snacks department.** 
 ```{r}
 top_product =
   instacart %>% 
