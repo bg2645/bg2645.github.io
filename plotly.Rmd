@@ -35,7 +35,7 @@ group_by(product_name, order_dow) %>%
 summarize(order_id = n())
 ```
 
-The number of Cheese puffs, cheese puffs originals, original baksed cheese puffs, ordered according to the day of the week on which the order was placed
+The number of Cheese Puffs, Cheese Puffs Originals, Original Baked Cheese Puffs, ordered according to the day of the week on which the order was placed
 ```{r}
 cheesepuff %>%
   plot_ly(x = ~order_dow, y = ~order_id, color = ~product_name, type = "scatter", mode = "lines+markers", alpha = 0.5) %>%
