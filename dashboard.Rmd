@@ -19,6 +19,15 @@ Column {data-width=600}
 -----------------------------------------------------------------------
 ### Chart A
 ```{r}
+data("instacart")
+instacart = instacart %>%
+filter(department == "snacks") %>%
+mutate(reordered = recode(reordered, "1" = "Yes", "0" = "No"), 
+       order_dow = recode(order_dow, "0" = "Sunday", "1" = "Monday", 
+                          "2" = "Tuesday", "3" = "Wednesday", "4" = "Thursday", 
+                          "5" = "Friday", "6" = "Saturday"),
+       order_dow= factor(order_dow, levels = c("Sunday", "Monday", "Tuesday", "Wednesday", 
+                                               "Thursday", "Friday", "Saturday"))) 
 top_product =
   instacart %>% 
   count(product_name, sort = TRUE) %>% 
@@ -60,15 +69,6 @@ inner_join(counts, top_ten, by = "aisle")  %>%
 ### Chart C
 
 ```{r}
-data("instacart")
-instacart = instacart %>%
-filter(department == "snacks") %>%
-mutate(reordered = recode(reordered, "1" = "Yes", "0" = "No"), 
-       order_dow = recode(order_dow, "0" = "Sunday", "1" = "Monday", 
-                          "2" = "Tuesday", "3" = "Wednesday", "4" = "Thursday", 
-                          "5" = "Friday", "6" = "Saturday"),
-       order_dow= factor(order_dow, levels = c("Sunday", "Monday", "Tuesday", "Wednesday", 
-                                               "Thursday", "Friday", "Saturday"))) 
 
 cheesepuff = instacart %>%
 filter(product_name %in% c("Cheese Puffs Original", "Cheese Puffs", "Original Baked Cheese Puffs")) %>% 
