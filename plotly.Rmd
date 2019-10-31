@@ -77,5 +77,5 @@ top_product =
 inner_join(instacart, top_product, by = "product_name") %>% 
   plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "Set2", alpha = 0.5) %>% 
 layout(xaxis = list(title = 'Top 10 Products in the Snack Department'),
-       yaxis = list(title = 'Order Hour of Day')) 
+       yaxis = list(title = 'Order Hour of Day'))
 ```
